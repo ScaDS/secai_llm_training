@@ -1,0 +1,49 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+
+parts:
+  - caption: Setup
+    chapters:
+    - file: 00_setup/readme.md
+    
+  - caption: LLM basics
+    chapters:
+    
+    - file: 15_endpoint_apis/01_scadsai_llm_endpoint.ipynb
+    - file: 15_endpoint_apis/02_ollama_endpoint.ipynb
+    - file: 15_endpoint_apis/06_kisski_endpoint.ipynb
+    - file: 15_endpoint_apis/03_blablador_endpoint.ipynb
+
+    - file: 20_chatbots/readme.md
+      sections:
+      - file: 20_chatbots/gui.ipynb
+
+  - caption: Retrieval Augmented Generation (RAG)
+    chapters:
+
+    - file: 33_chat_with_docs/readme.md
+    - file: 33_chat_with_docs/chat-with-docs.ipynb
+    - file: 33_chat_with_docs/hpc-compendium-prepare-data.ipynb
+    - file: 33_chat_with_docs/long-context-prompting.ipynb
+    - file: 33_chat_with_docs/chat-with-hpc-compendium.ipynb
+    - file: 33_chat_with_docs/llm-based-rag.ipynb
+      
+  - caption: Multi-modal LLMs
+    chapters:
+
+    - file: 47_vision/22_vision_qwen.ipynb
+    - file: 47_vision/20_vision_ollama.ipynb
+
+  - caption: Agents
+    chapters:
+    - file: 50_function_calling/12_function_calling_scadsai_llm.ipynb
+    - file: 66_arxiv_agent/arxiv_powerpoint_karaoke.ipynb
+    - file: 66_arxiv_agent/multiagent_write_review.ipynb
+    - file: 66_arxiv_agent/simplifying_agentic_workflows.ipynb
+
+  - caption: Links
+    chapters:
+    - file: imprint
