@@ -1,0 +1,1408 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>PowerPoint Karaoke about Arxiv papers &#8212; SECAI LLM Training</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '66_arxiv_agent/arxiv_powerpoint_karaoke';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="A multi-agent system writing a manuscript" href="multiagent_write_review.html" />
+    <link rel="prev" title="Function calling using ScaDS.AI’s LLM service" href="../50_function_calling/12_function_calling_scadsai_llm.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../00_setup/readme.html">
+                        Setting up your computer
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../15_endpoint_apis/01_scadsai_llm_endpoint.html">
+                        ScaDS.AI LLM endpoint
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../15_endpoint_apis/02_ollama_endpoint.html">
+                        Ollama
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../15_endpoint_apis/06_kisski_endpoint.html">
+                        KISSKI / GWDG endpoint
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../15_endpoint_apis/03_blablador_endpoint.html">
+                        Blablador endpoint
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../20_chatbots/readme.html">
+                        Chatbots
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../33_chat_with_docs/readme.html">
+                        Retreivela Augmented Generation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../33_chat_with_docs/chat-with-docs.html">
+                        Chat with your PDFs!
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../33_chat_with_docs/hpc-compendium-prepare-data.html">
+                        Chat with documentation about HPC systems
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../33_chat_with_docs/long-context-prompting.html">
+                        Long context prompting
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../33_chat_with_docs/chat-with-hpc-compendium.html">
+                        Ask about the HPC compendium
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../33_chat_with_docs/llm-based-rag.html">
+                        LLM-based Retrieval Augmented Generation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../47_vision/22_vision_qwen.html">
+                        Qwen2-VL
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../47_vision/20_vision_ollama.html">
+                        LLAVA
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../50_function_calling/12_function_calling_scadsai_llm.html">
+                        Function calling using ScaDS.AI’s LLM service
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        PowerPoint Karaoke about Arxiv papers
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="multiagent_write_review.html">
+                        A multi-agent system writing a manuscript
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="simplifying_agentic_workflows.html">
+                        Simplifing agentic workflows
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../imprint.html">
+                        Imprint
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../00_setup/readme.html">
+                        Setting up your computer
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../15_endpoint_apis/01_scadsai_llm_endpoint.html">
+                        ScaDS.AI LLM endpoint
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../15_endpoint_apis/02_ollama_endpoint.html">
+                        Ollama
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../15_endpoint_apis/06_kisski_endpoint.html">
+                        KISSKI / GWDG endpoint
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../15_endpoint_apis/03_blablador_endpoint.html">
+                        Blablador endpoint
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../20_chatbots/readme.html">
+                        Chatbots
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../33_chat_with_docs/readme.html">
+                        Retreivela Augmented Generation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../33_chat_with_docs/chat-with-docs.html">
+                        Chat with your PDFs!
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../33_chat_with_docs/hpc-compendium-prepare-data.html">
+                        Chat with documentation about HPC systems
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../33_chat_with_docs/long-context-prompting.html">
+                        Long context prompting
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../33_chat_with_docs/chat-with-hpc-compendium.html">
+                        Ask about the HPC compendium
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../33_chat_with_docs/llm-based-rag.html">
+                        LLM-based Retrieval Augmented Generation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../47_vision/22_vision_qwen.html">
+                        Qwen2-VL
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../47_vision/20_vision_ollama.html">
+                        LLAVA
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../50_function_calling/12_function_calling_scadsai_llm.html">
+                        Function calling using ScaDS.AI’s LLM service
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        PowerPoint Karaoke about Arxiv papers
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="multiagent_write_review.html">
+                        A multi-agent system writing a manuscript
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="simplifying_agentic_workflows.html">
+                        Simplifing agentic workflows
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../imprint.html">
+                        Imprint
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+  
+
+
+<a class="navbar-brand logo" href="../intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    </div>
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    SECAI LLM Training
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setup</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../00_setup/readme.html">Setting up your computer</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">LLM basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../15_endpoint_apis/01_scadsai_llm_endpoint.html">ScaDS.AI LLM endpoint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../15_endpoint_apis/02_ollama_endpoint.html">Ollama</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../15_endpoint_apis/06_kisski_endpoint.html">KISSKI / GWDG endpoint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../15_endpoint_apis/03_blablador_endpoint.html">Blablador endpoint</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../20_chatbots/readme.html">Chatbots</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../20_chatbots/gui.html">A Chatbot GUI</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Retrieval Augmented Generation (RAG)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../33_chat_with_docs/readme.html">Retreivela Augmented Generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../33_chat_with_docs/chat-with-docs.html">Chat with your PDFs!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../33_chat_with_docs/hpc-compendium-prepare-data.html">Chat with documentation about HPC systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../33_chat_with_docs/long-context-prompting.html">Long context prompting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../33_chat_with_docs/chat-with-hpc-compendium.html">Ask about the HPC compendium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../33_chat_with_docs/llm-based-rag.html">LLM-based Retrieval Augmented Generation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Multi-modal LLMs</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../47_vision/22_vision_qwen.html">Qwen2-VL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../47_vision/20_vision_ollama.html">LLAVA</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Agents</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../50_function_calling/12_function_calling_scadsai_llm.html">Function calling using ScaDS.AI’s LLM service</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">PowerPoint Karaoke about Arxiv papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multiagent_write_review.html">A multi-agent system writing a manuscript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simplifying_agentic_workflows.html">Simplifing agentic workflows</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../imprint.html">Imprint</a></li>
+
+</ul>
+
+    </div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
+            <span class="fa-solid fa-bars"></span>
+        </label>
+    </div>
+    <div class="header-article__right">
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+  </ul>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<div class="dropdown dropdown-repository-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="https://github.com/ScaDS/secai_llm_training" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">repository</span>
+</a>
+</a>
+      
+      <li><a href="https://github.com/ScaDS/secai_llm_training/issues/new?title=Issue%20on%20page%20%2F66_arxiv_agent/arxiv_powerpoint_karaoke.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">open issue</span>
+</a>
+</a>
+      
+  </ul>
+</div>
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="../_sources/66_arxiv_agent/arxiv_powerpoint_karaoke.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</a>
+      
+      <li>
+<button onclick="printPdf(this)"
+  class="btn btn-sm dropdown-item"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</a>
+      
+  </ul>
+</div>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
+            <span class="fa-solid fa-list"></span>
+        </label>
+    </div>
+</div>
+            </div>
+            
+            
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>PowerPoint Karaoke about Arxiv papers</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise">
+   Exercise
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+            <article class="bd-article" role="main">
+              
+  <section class="tex2jax_ignore mathjax_ignore" id="powerpoint-karaoke-about-arxiv-papers">
+<h1>PowerPoint Karaoke about Arxiv papers<a class="headerlink" href="#powerpoint-karaoke-about-arxiv-papers" title="Permalink to this heading">#</a></h1>
+<p>In this notebook we program an agent that is capable of generating PowerPoint slide decks out of Arxiv papers.</p>
+<p>We will use the <a class="reference external" href="https://llm.scads.ai/">ScaDS.AI LLM infrastructure</a> infrastructure at the <a class="reference external" href="https://tu-dresden.de/zih">Center for Information Services and High Performance Computing (ZIH) of TU Dresden</a>. To use it, you must be connected via <a class="reference external" href="https://tu-dresden.de/zih/dienste/service-katalog/arbeitsumgebung/zugang_datennetz/vpn">TU Dresden VPN</a> and have your API key stored in a <code class="docutils literal notranslate"><span class="pre">SCADSAI_API_KEY</span></code> environment variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">llama_index.core.agent</span><span class="w"> </span><span class="kn">import</span> <span class="n">ReActAgent</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">llama_index.llms.ollama</span><span class="w"> </span><span class="kn">import</span> <span class="n">Ollama</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">llama_index.llms.openai_like</span><span class="w"> </span><span class="kn">import</span> <span class="n">OpenAILike</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">llama_index.core.tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">FunctionTool</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Markdown</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">utilities</span><span class="w"> </span><span class="kn">import</span> <span class="n">convert_to_markdown</span><span class="p">,</span> <span class="n">search_arxiv</span><span class="p">,</span> <span class="n">download_pdf</span><span class="p">,</span> <span class="n">pdf_to_markdown</span><span class="p">,</span> <span class="n">make_powerpoint_slides</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>First, we initialize the LLM. The server supports the OpenAI-API.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">llm</span> <span class="o">=</span> <span class="n">OpenAILike</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;meta-llama/Llama-3.3-70B-Instruct&quot;</span><span class="p">,</span> 
+                 <span class="n">request_timeout</span><span class="o">=</span><span class="mf">120.0</span><span class="p">,</span> 
+                 <span class="n">api_base</span><span class="o">=</span><span class="s2">&quot;https://llm.scads.ai/v1&quot;</span><span class="p">,</span> 
+                 <span class="n">api_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;SCADSAI_API_KEY&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, we specify tools. The actual functionality is programmed in <a class="reference download internal" download="" href="../_downloads/2a8096d4d7df0d936ed91970bea69cb0/arxiv_utilities.py"><span class="xref download myst">arxiv_utilities.py</span></a>. Note: To make these functions work, they require detailed docstrings describing precisely what parameters the functions require.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tools</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="nd">@tools</span><span class="o">.</span><span class="n">append</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">search_publications</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">author</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Searches the arxiv for papers using a query, selects papers from given authors and/or by year.&quot;&quot;&quot;</span>
+    <span class="n">papers</span> <span class="o">=</span> <span class="n">search_arxiv</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">author</span><span class="o">=</span><span class="n">author</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="n">year</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="n">max_results</span><span class="p">)</span>
+    <span class="n">markdown</span> <span class="o">=</span> <span class="n">convert_to_markdown</span><span class="p">(</span><span class="n">papers</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">markdown</span>
+
+<span class="nd">@tools</span><span class="o">.</span><span class="n">append</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">download_paper</span><span class="p">(</span><span class="n">paper_link</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Downloads a paper and return its contents as markdown.&quot;&quot;&quot;</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="n">download_pdf</span><span class="p">(</span><span class="n">paper_link</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">filename</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">pdf_to_markdown</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="c1"># You can also add external tools like this.</span>
+<span class="n">tools</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">make_powerpoint_slides</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can then initialize the agent.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span> <span class="o">=</span> <span class="n">ReActAgent</span><span class="o">.</span><span class="n">from_tools</span><span class="p">([</span><span class="n">FunctionTool</span><span class="o">.</span><span class="n">from_defaults</span><span class="p">(</span><span class="n">fn</span><span class="o">=</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tools</span><span class="p">],</span> <span class="n">llm</span><span class="o">=</span><span class="n">llm</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Using this small helper function, we can ask the agent and will read its output as properly formatted markdown.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">chat</span><span class="p">(</span><span class="n">query</span><span class="p">):</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">chat</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">response</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chat</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">I need to give a presentation about the latest arxiv paper from the year 2022 that was about LLMs.</span>
+<span class="s2">Please make a powerpoint slide deck about this paper.</span>
+<span class="s2">The first slide should have the same title as the paper, and mention the authors, and give a link to the paper.</span>
+<span class="s2">The following slides are about the individual chapters of the paper.</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">InternalServerError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">chat</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span><span class="s2"> I need to give a presentation about the latest arxiv paper from the year 2022 that was about LLMs.</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span><span class="s2"> Please make a powerpoint slide deck about this paper.</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span><span class="s2"> The first slide should have the same title as the paper, and mention the authors, and give a link to the paper.</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span><span class="s2"> The following slides are about the individual chapters of the paper.</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span><span class="s2"> &quot;&quot;&quot;</span><span class="p">)</span>
+
+<span class="nn">Cell In[5], line 2,</span> in <span class="ni">chat</span><span class="nt">(query)</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span><span class="w"> </span><span class="nf">chat</span><span class="p">(</span><span class="n">query</span><span class="p">):</span>
+<span class="ne">----&gt; </span><span class="mi">2</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">chat</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">response</span><span class="p">))</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:321,</span> in <span class="ni">Dispatcher.span.&lt;locals&gt;.wrapper</span><span class="nt">(func, instance, args, kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">318</span>             <span class="n">_logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to reset active_span_id: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">320</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">321</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">322</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Future</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">323</span>         <span class="c1"># If the result is a Future, wrap it</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span>         <span class="n">new_future</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">ensure_future</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\llama_index\core\callbacks\utils.py:41,</span> in <span class="ni">trace_method.&lt;locals&gt;.decorator.&lt;locals&gt;.wrapper</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="n">callback_manager</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">CallbackManager</span><span class="p">,</span> <span class="n">callback_manager</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">40</span> <span class="k">with</span> <span class="n">callback_manager</span><span class="o">.</span><span class="n">as_trace</span><span class="p">(</span><span class="n">trace_id</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">41</span>     <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\llama_index\core\agent\runner\base.py:647,</span> in <span class="ni">AgentRunner.chat</span><span class="nt">(self, message, chat_history, tool_choice)</span>
+<span class="g g-Whitespace">    </span><span class="mi">642</span>     <span class="n">tool_choice</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_tool_choice</span>
+<span class="g g-Whitespace">    </span><span class="mi">643</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">callback_manager</span><span class="o">.</span><span class="n">event</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">644</span>     <span class="n">CBEventType</span><span class="o">.</span><span class="n">AGENT_STEP</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">645</span>     <span class="n">payload</span><span class="o">=</span><span class="p">{</span><span class="n">EventPayload</span><span class="o">.</span><span class="n">MESSAGES</span><span class="p">:</span> <span class="p">[</span><span class="n">message</span><span class="p">]},</span>
+<span class="g g-Whitespace">    </span><span class="mi">646</span> <span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">647</span>     <span class="n">chat_response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chat</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">648</span>         <span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">649</span>         <span class="n">chat_history</span><span class="o">=</span><span class="n">chat_history</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">650</span>         <span class="n">tool_choice</span><span class="o">=</span><span class="n">tool_choice</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">651</span>         <span class="n">mode</span><span class="o">=</span><span class="n">ChatResponseMode</span><span class="o">.</span><span class="n">WAIT</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">652</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">653</span>     <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">chat_response</span><span class="p">,</span> <span class="n">AgentChatResponse</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">654</span>     <span class="n">e</span><span class="o">.</span><span class="n">on_end</span><span class="p">(</span><span class="n">payload</span><span class="o">=</span><span class="p">{</span><span class="n">EventPayload</span><span class="o">.</span><span class="n">RESPONSE</span><span class="p">:</span> <span class="n">chat_response</span><span class="p">})</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:321,</span> in <span class="ni">Dispatcher.span.&lt;locals&gt;.wrapper</span><span class="nt">(func, instance, args, kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">318</span>             <span class="n">_logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to reset active_span_id: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">320</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">321</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">322</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Future</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">323</span>         <span class="c1"># If the result is a Future, wrap it</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span>         <span class="n">new_future</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">ensure_future</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\llama_index\core\agent\runner\base.py:579,</span> in <span class="ni">AgentRunner._chat</span><span class="nt">(self, message, chat_history, tool_choice, mode)</span>
+<span class="g g-Whitespace">    </span><span class="mi">576</span> <span class="n">dispatcher</span><span class="o">.</span><span class="n">event</span><span class="p">(</span><span class="n">AgentChatWithStepStartEvent</span><span class="p">(</span><span class="n">user_msg</span><span class="o">=</span><span class="n">message</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">577</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">578</span>     <span class="c1"># pass step queue in as argument, assume step executor is stateless</span>
+<span class="ne">--&gt; </span><span class="mi">579</span>     <span class="n">cur_step_output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_run_step</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">580</span>         <span class="n">task</span><span class="o">.</span><span class="n">task_id</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span> <span class="n">tool_choice</span><span class="o">=</span><span class="n">tool_choice</span>
+<span class="g g-Whitespace">    </span><span class="mi">581</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">583</span>     <span class="k">if</span> <span class="n">cur_step_output</span><span class="o">.</span><span class="n">is_last</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">584</span>         <span class="n">result_output</span> <span class="o">=</span> <span class="n">cur_step_output</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:321,</span> in <span class="ni">Dispatcher.span.&lt;locals&gt;.wrapper</span><span class="nt">(func, instance, args, kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">318</span>             <span class="n">_logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to reset active_span_id: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">320</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">321</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">322</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Future</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">323</span>         <span class="c1"># If the result is a Future, wrap it</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span>         <span class="n">new_future</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">ensure_future</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\llama_index\core\agent\runner\base.py:412,</span> in <span class="ni">AgentRunner._run_step</span><span class="nt">(self, task_id, step, input, mode, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">408</span> <span class="c1"># TODO: figure out if you can dynamically swap in different step executors</span>
+<span class="g g-Whitespace">    </span><span class="mi">409</span> <span class="c1"># not clear when you would do that by theoretically possible</span>
+<span class="g g-Whitespace">    </span><span class="mi">411</span> <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="n">ChatResponseMode</span><span class="o">.</span><span class="n">WAIT</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">412</span>     <span class="n">cur_step_output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">agent_worker</span><span class="o">.</span><span class="n">run_step</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">task</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">413</span> <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="n">ChatResponseMode</span><span class="o">.</span><span class="n">STREAM</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">414</span>     <span class="n">cur_step_output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">agent_worker</span><span class="o">.</span><span class="n">stream_step</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">task</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:321,</span> in <span class="ni">Dispatcher.span.&lt;locals&gt;.wrapper</span><span class="nt">(func, instance, args, kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">318</span>             <span class="n">_logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to reset active_span_id: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">320</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">321</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">322</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Future</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">323</span>         <span class="c1"># If the result is a Future, wrap it</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span>         <span class="n">new_future</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">ensure_future</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\llama_index\core\callbacks\utils.py:41,</span> in <span class="ni">trace_method.&lt;locals&gt;.decorator.&lt;locals&gt;.wrapper</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="n">callback_manager</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">CallbackManager</span><span class="p">,</span> <span class="n">callback_manager</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">40</span> <span class="k">with</span> <span class="n">callback_manager</span><span class="o">.</span><span class="n">as_trace</span><span class="p">(</span><span class="n">trace_id</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">41</span>     <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\llama_index\core\agent\react\step.py:818,</span> in <span class="ni">ReActAgentWorker.run_step</span><span class="nt">(self, step, task, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">815</span> <span class="nd">@trace_method</span><span class="p">(</span><span class="s2">&quot;run_step&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">816</span> <span class="k">def</span><span class="w"> </span><span class="nf">run_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">:</span> <span class="n">TaskStep</span><span class="p">,</span> <span class="n">task</span><span class="p">:</span> <span class="n">Task</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TaskStepOutput</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">817</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Run step.&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">818</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_run_step</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">task</span><span class="p">)</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\llama_index\core\agent\react\step.py:570,</span> in <span class="ni">ReActAgentWorker._run_step</span><span class="nt">(self, step, task)</span>
+<span class="g g-Whitespace">    </span><span class="mi">562</span> <span class="n">input_chat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_react_chat_formatter</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">563</span>     <span class="n">tools</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">564</span>     <span class="n">chat_history</span><span class="o">=</span><span class="n">task</span><span class="o">.</span><span class="n">memory</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="n">task</span><span class="o">.</span><span class="n">input</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">565</span>     <span class="o">+</span> <span class="n">task</span><span class="o">.</span><span class="n">extra_state</span><span class="p">[</span><span class="s2">&quot;new_memory&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get_all</span><span class="p">(),</span>
+<span class="g g-Whitespace">    </span><span class="mi">566</span>     <span class="n">current_reasoning</span><span class="o">=</span><span class="n">task</span><span class="o">.</span><span class="n">extra_state</span><span class="p">[</span><span class="s2">&quot;current_reasoning&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">    </span><span class="mi">567</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">569</span> <span class="c1"># send prompt</span>
+<span class="ne">--&gt; </span><span class="mi">570</span> <span class="n">chat_response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_llm</span><span class="o">.</span><span class="n">chat</span><span class="p">(</span><span class="n">input_chat</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">571</span> <span class="c1"># given react prompt outputs, call tools or return response</span>
+<span class="g g-Whitespace">    </span><span class="mi">572</span> <span class="n">reasoning_steps</span><span class="p">,</span> <span class="n">is_done</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_process_actions</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">573</span>     <span class="n">task</span><span class="p">,</span> <span class="n">tools</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="n">chat_response</span>
+<span class="g g-Whitespace">    </span><span class="mi">574</span> <span class="p">)</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:321,</span> in <span class="ni">Dispatcher.span.&lt;locals&gt;.wrapper</span><span class="nt">(func, instance, args, kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">318</span>             <span class="n">_logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to reset active_span_id: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">320</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">321</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">322</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Future</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">323</span>         <span class="c1"># If the result is a Future, wrap it</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span>         <span class="n">new_future</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">ensure_future</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\llama_index\llms\openai_like\base.py:114,</span> in <span class="ni">OpenAILike.chat</span><span class="nt">(self, messages, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">112</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">is_chat_model</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">113</span>     <span class="n">prompt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">messages_to_prompt</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">114</span>     <span class="n">completion_response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">complete</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">formatted</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">115</span>     <span class="k">return</span> <span class="n">completion_response_to_chat_response</span><span class="p">(</span><span class="n">completion_response</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">117</span> <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">chat</span><span class="p">(</span><span class="n">messages</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:321,</span> in <span class="ni">Dispatcher.span.&lt;locals&gt;.wrapper</span><span class="nt">(func, instance, args, kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">318</span>             <span class="n">_logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to reset active_span_id: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">320</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">321</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">322</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Future</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">323</span>         <span class="c1"># If the result is a Future, wrap it</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span>         <span class="n">new_future</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">ensure_future</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\llama_index\llms\openai_like\base.py:99,</span> in <span class="ni">OpenAILike.complete</span><span class="nt">(self, prompt, formatted, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">96</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">formatted</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">97</span>     <span class="n">prompt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">completion_to_prompt</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">99</span> <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">complete</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:321,</span> in <span class="ni">Dispatcher.span.&lt;locals&gt;.wrapper</span><span class="nt">(func, instance, args, kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">318</span>             <span class="n">_logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to reset active_span_id: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">320</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">321</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">322</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Future</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">323</span>         <span class="c1"># If the result is a Future, wrap it</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span>         <span class="n">new_future</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">ensure_future</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\llama_index\core\llms\callbacks.py:431,</span> in <span class="ni">llm_completion_callback.&lt;locals&gt;.wrap.&lt;locals&gt;.wrapped_llm_predict</span><span class="nt">(_self, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">422</span> <span class="n">event_id</span> <span class="o">=</span> <span class="n">callback_manager</span><span class="o">.</span><span class="n">on_event_start</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">423</span>     <span class="n">CBEventType</span><span class="o">.</span><span class="n">LLM</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">424</span>     <span class="n">payload</span><span class="o">=</span><span class="p">{</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">428</span>     <span class="p">},</span>
+<span class="g g-Whitespace">    </span><span class="mi">429</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">430</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">431</span>     <span class="n">f_return_val</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">_self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">432</span> <span class="k">except</span> <span class="ne">BaseException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">433</span>     <span class="n">callback_manager</span><span class="o">.</span><span class="n">on_event_end</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">434</span>         <span class="n">CBEventType</span><span class="o">.</span><span class="n">LLM</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">435</span>         <span class="n">payload</span><span class="o">=</span><span class="p">{</span><span class="n">EventPayload</span><span class="o">.</span><span class="n">EXCEPTION</span><span class="p">:</span> <span class="n">e</span><span class="p">},</span>
+<span class="g g-Whitespace">    </span><span class="mi">436</span>         <span class="n">event_id</span><span class="o">=</span><span class="n">event_id</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">437</span>     <span class="p">)</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\llama_index\llms\openai\base.py:375,</span> in <span class="ni">OpenAI.complete</span><span class="nt">(self, prompt, formatted, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">373</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">374</span>     <span class="n">complete_fn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_complete</span>
+<span class="ne">--&gt; </span><span class="mi">375</span> <span class="k">return</span> <span class="n">complete_fn</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\llama_index\llms\openai\base.py:106,</span> in <span class="ni">llm_retry_decorator.&lt;locals&gt;.wrapper</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">97</span>     <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span> <span class="n">retry</span> <span class="o">=</span> <span class="n">create_retry_decorator</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">100</span>     <span class="n">max_retries</span><span class="o">=</span><span class="n">max_retries</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">101</span>     <span class="n">random_exponential</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">104</span>     <span class="n">max_seconds</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">105</span> <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">106</span> <span class="k">return</span> <span class="n">retry</span><span class="p">(</span><span class="n">f</span><span class="p">)(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\tenacity\__init__.py:336,</span> in <span class="ni">BaseRetrying.wraps.&lt;locals&gt;.wrapped_f</span><span class="nt">(*args, **kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">334</span> <span class="n">copy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">335</span> <span class="n">wrapped_f</span><span class="o">.</span><span class="n">statistics</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">statistics</span>  <span class="c1"># type: ignore[attr-defined]</span>
+<span class="ne">--&gt; </span><span class="mi">336</span> <span class="k">return</span> <span class="n">copy</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\tenacity\__init__.py:475,</span> in <span class="ni">Retrying.__call__</span><span class="nt">(self, fn, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">473</span> <span class="n">retry_state</span> <span class="o">=</span> <span class="n">RetryCallState</span><span class="p">(</span><span class="n">retry_object</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="n">fn</span><span class="o">=</span><span class="n">fn</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">474</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">475</span>     <span class="n">do</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">iter</span><span class="p">(</span><span class="n">retry_state</span><span class="o">=</span><span class="n">retry_state</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">476</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">do</span><span class="p">,</span> <span class="n">DoAttempt</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">477</span>         <span class="k">try</span><span class="p">:</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\tenacity\__init__.py:376,</span> in <span class="ni">BaseRetrying.iter</span><span class="nt">(self, retry_state)</span>
+<span class="g g-Whitespace">    </span><span class="mi">374</span> <span class="n">result</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">375</span> <span class="k">for</span> <span class="n">action</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">iter_state</span><span class="o">.</span><span class="n">actions</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">376</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">action</span><span class="p">(</span><span class="n">retry_state</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">377</span> <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\tenacity\__init__.py:418,</span> in <span class="ni">BaseRetrying._post_stop_check_actions.&lt;locals&gt;.exc_check</span><span class="nt">(rs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">416</span> <span class="n">retry_exc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">retry_error_cls</span><span class="p">(</span><span class="n">fut</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">417</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">reraise</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">418</span>     <span class="k">raise</span> <span class="n">retry_exc</span><span class="o">.</span><span class="n">reraise</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">419</span> <span class="k">raise</span> <span class="n">retry_exc</span> <span class="kn">from</span><span class="w"> </span><span class="nn">fut.exception</span><span class="p">()</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\tenacity\__init__.py:185,</span> in <span class="ni">RetryError.reraise</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">183</span> <span class="k">def</span><span class="w"> </span><span class="nf">reraise</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">t</span><span class="o">.</span><span class="n">NoReturn</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">184</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_attempt</span><span class="o">.</span><span class="n">failed</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">185</span>         <span class="k">raise</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_attempt</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">186</span>     <span class="k">raise</span> <span class="bp">self</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\concurrent\futures\_base.py:449,</span> in <span class="ni">Future.result</span><span class="nt">(self, timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">447</span>     <span class="k">raise</span> <span class="n">CancelledError</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">448</span> <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_state</span> <span class="o">==</span> <span class="n">FINISHED</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">449</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__get_result</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">451</span> <span class="bp">self</span><span class="o">.</span><span class="n">_condition</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">timeout</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">453</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_state</span> <span class="ow">in</span> <span class="p">[</span><span class="n">CANCELLED</span><span class="p">,</span> <span class="n">CANCELLED_AND_NOTIFIED</span><span class="p">]:</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\concurrent\futures\_base.py:401,</span> in <span class="ni">Future.__get_result</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">399</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exception</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">400</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">401</span>         <span class="k">raise</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exception</span>
+<span class="g g-Whitespace">    </span><span class="mi">402</span>     <span class="k">finally</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">403</span>         <span class="c1"># Break a reference cycle with the exception in self._exception</span>
+<span class="g g-Whitespace">    </span><span class="mi">404</span>         <span class="bp">self</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\tenacity\__init__.py:478,</span> in <span class="ni">Retrying.__call__</span><span class="nt">(self, fn, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">476</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">do</span><span class="p">,</span> <span class="n">DoAttempt</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">477</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">478</span>         <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">479</span>     <span class="k">except</span> <span class="ne">BaseException</span><span class="p">:</span>  <span class="c1"># noqa: B902</span>
+<span class="g g-Whitespace">    </span><span class="mi">480</span>         <span class="n">retry_state</span><span class="o">.</span><span class="n">set_exception</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">())</span>  <span class="c1"># type: ignore[arg-type]</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\llama_index\llms\openai\base.py:525,</span> in <span class="ni">OpenAI._complete</span><span class="nt">(self, prompt, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">522</span> <span class="bp">self</span><span class="o">.</span><span class="n">_update_max_tokens</span><span class="p">(</span><span class="n">all_kwargs</span><span class="p">,</span> <span class="n">prompt</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">524</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">reuse_client</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">525</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">526</span>         <span class="n">prompt</span><span class="o">=</span><span class="n">prompt</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">527</span>         <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">528</span>         <span class="o">**</span><span class="n">all_kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">529</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">530</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">531</span>     <span class="k">with</span> <span class="n">client</span><span class="p">:</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\openai\_utils\_utils.py:275,</span> in <span class="ni">required_args.&lt;locals&gt;.inner.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">273</span>             <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Missing required argument: </span><span class="si">{</span><span class="n">quote</span><span class="p">(</span><span class="n">missing</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">274</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">275</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\openai\resources\completions.py:539,</span> in <span class="ni">Completions.create</span><span class="nt">(self, model, prompt, best_of, echo, frequency_penalty, logit_bias, logprobs, max_tokens, n, presence_penalty, seed, stop, stream, stream_options, suffix, temperature, top_p, user, extra_headers, extra_query, extra_body, timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">510</span> <span class="nd">@required_args</span><span class="p">([</span><span class="s2">&quot;model&quot;</span><span class="p">,</span> <span class="s2">&quot;prompt&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;model&quot;</span><span class="p">,</span> <span class="s2">&quot;prompt&quot;</span><span class="p">,</span> <span class="s2">&quot;stream&quot;</span><span class="p">])</span>
+<span class="g g-Whitespace">    </span><span class="mi">511</span> <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">512</span>     <span class="bp">self</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">537</span>     <span class="n">timeout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="n">httpx</span><span class="o">.</span><span class="n">Timeout</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">|</span> <span class="n">NotGiven</span> <span class="o">=</span> <span class="n">NOT_GIVEN</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">538</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Completion</span> <span class="o">|</span> <span class="n">Stream</span><span class="p">[</span><span class="n">Completion</span><span class="p">]:</span>
+<span class="ne">--&gt; </span><span class="mi">539</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_post</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">540</span>         <span class="s2">&quot;/completions&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">541</span>         <span class="n">body</span><span class="o">=</span><span class="n">maybe_transform</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">542</span>             <span class="p">{</span>
+<span class="g g-Whitespace">    </span><span class="mi">543</span>                 <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">model</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">544</span>                 <span class="s2">&quot;prompt&quot;</span><span class="p">:</span> <span class="n">prompt</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">545</span>                 <span class="s2">&quot;best_of&quot;</span><span class="p">:</span> <span class="n">best_of</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">546</span>                 <span class="s2">&quot;echo&quot;</span><span class="p">:</span> <span class="n">echo</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">547</span>                 <span class="s2">&quot;frequency_penalty&quot;</span><span class="p">:</span> <span class="n">frequency_penalty</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">548</span>                 <span class="s2">&quot;logit_bias&quot;</span><span class="p">:</span> <span class="n">logit_bias</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">549</span>                 <span class="s2">&quot;logprobs&quot;</span><span class="p">:</span> <span class="n">logprobs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">550</span>                 <span class="s2">&quot;max_tokens&quot;</span><span class="p">:</span> <span class="n">max_tokens</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">551</span>                 <span class="s2">&quot;n&quot;</span><span class="p">:</span> <span class="n">n</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">552</span>                 <span class="s2">&quot;presence_penalty&quot;</span><span class="p">:</span> <span class="n">presence_penalty</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">553</span>                 <span class="s2">&quot;seed&quot;</span><span class="p">:</span> <span class="n">seed</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">554</span>                 <span class="s2">&quot;stop&quot;</span><span class="p">:</span> <span class="n">stop</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">555</span>                 <span class="s2">&quot;stream&quot;</span><span class="p">:</span> <span class="n">stream</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">556</span>                 <span class="s2">&quot;stream_options&quot;</span><span class="p">:</span> <span class="n">stream_options</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">557</span>                 <span class="s2">&quot;suffix&quot;</span><span class="p">:</span> <span class="n">suffix</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">558</span>                 <span class="s2">&quot;temperature&quot;</span><span class="p">:</span> <span class="n">temperature</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">559</span>                 <span class="s2">&quot;top_p&quot;</span><span class="p">:</span> <span class="n">top_p</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">560</span>                 <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="n">user</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">561</span>             <span class="p">},</span>
+<span class="g g-Whitespace">    </span><span class="mi">562</span>             <span class="n">completion_create_params</span><span class="o">.</span><span class="n">CompletionCreateParams</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">563</span>         <span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">564</span>         <span class="n">options</span><span class="o">=</span><span class="n">make_request_options</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">565</span>             <span class="n">extra_headers</span><span class="o">=</span><span class="n">extra_headers</span><span class="p">,</span> <span class="n">extra_query</span><span class="o">=</span><span class="n">extra_query</span><span class="p">,</span> <span class="n">extra_body</span><span class="o">=</span><span class="n">extra_body</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span>
+<span class="g g-Whitespace">    </span><span class="mi">566</span>         <span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">567</span>         <span class="n">cast_to</span><span class="o">=</span><span class="n">Completion</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">568</span>         <span class="n">stream</span><span class="o">=</span><span class="n">stream</span> <span class="ow">or</span> <span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">569</span>         <span class="n">stream_cls</span><span class="o">=</span><span class="n">Stream</span><span class="p">[</span><span class="n">Completion</span><span class="p">],</span>
+<span class="g g-Whitespace">    </span><span class="mi">570</span>     <span class="p">)</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\openai\_base_client.py:1280,</span> in <span class="ni">SyncAPIClient.post</span><span class="nt">(self, path, cast_to, body, options, files, stream, stream_cls)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1266</span> <span class="k">def</span><span class="w"> </span><span class="nf">post</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1267</span>     <span class="bp">self</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1268</span>     <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1275</span>     <span class="n">stream_cls</span><span class="p">:</span> <span class="nb">type</span><span class="p">[</span><span class="n">_StreamT</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1276</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ResponseT</span> <span class="o">|</span> <span class="n">_StreamT</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1277</span>     <span class="n">opts</span> <span class="o">=</span> <span class="n">FinalRequestOptions</span><span class="o">.</span><span class="n">construct</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1278</span>         <span class="n">method</span><span class="o">=</span><span class="s2">&quot;post&quot;</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">path</span><span class="p">,</span> <span class="n">json_data</span><span class="o">=</span><span class="n">body</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">to_httpx_files</span><span class="p">(</span><span class="n">files</span><span class="p">),</span> <span class="o">**</span><span class="n">options</span>
+<span class="g g-Whitespace">   </span><span class="mi">1279</span>     <span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1280</span>     <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">ResponseT</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">cast_to</span><span class="p">,</span> <span class="n">opts</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">,</span> <span class="n">stream_cls</span><span class="o">=</span><span class="n">stream_cls</span><span class="p">))</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\openai\_base_client.py:957,</span> in <span class="ni">SyncAPIClient.request</span><span class="nt">(self, cast_to, options, remaining_retries, stream, stream_cls)</span>
+<span class="g g-Whitespace">    </span><span class="mi">954</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">955</span>     <span class="n">retries_taken</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="ne">--&gt; </span><span class="mi">957</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">958</span>     <span class="n">cast_to</span><span class="o">=</span><span class="n">cast_to</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">959</span>     <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">960</span>     <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">961</span>     <span class="n">stream_cls</span><span class="o">=</span><span class="n">stream_cls</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">962</span>     <span class="n">retries_taken</span><span class="o">=</span><span class="n">retries_taken</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">963</span> <span class="p">)</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\openai\_base_client.py:1002,</span> in <span class="ni">SyncAPIClient._request</span><span class="nt">(self, cast_to, options, retries_taken, stream, stream_cls)</span>
+<span class="g g-Whitespace">    </span><span class="mi">999</span> <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Encountered httpx.TimeoutException&quot;</span><span class="p">,</span> <span class="n">exc_info</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1001</span> <span class="k">if</span> <span class="n">remaining_retries</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1002</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_retry_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1003</span>         <span class="n">input_options</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1004</span>         <span class="n">cast_to</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1005</span>         <span class="n">retries_taken</span><span class="o">=</span><span class="n">retries_taken</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1006</span>         <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1007</span>         <span class="n">stream_cls</span><span class="o">=</span><span class="n">stream_cls</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1008</span>         <span class="n">response_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1009</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1011</span> <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Raising timeout error&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1012</span> <span class="k">raise</span> <span class="n">APITimeoutError</span><span class="p">(</span><span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">err</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\openai\_base_client.py:1095,</span> in <span class="ni">SyncAPIClient._retry_request</span><span class="nt">(self, options, cast_to, retries_taken, response_headers, stream, stream_cls)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1091</span> <span class="c1"># In a synchronous context we are blocking the entire thread. Up to the library user to run the client in a</span>
+<span class="g g-Whitespace">   </span><span class="mi">1092</span> <span class="c1"># different thread if necessary.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1093</span> <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">timeout</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1095</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1096</span>     <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1097</span>     <span class="n">cast_to</span><span class="o">=</span><span class="n">cast_to</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1098</span>     <span class="n">retries_taken</span><span class="o">=</span><span class="n">retries_taken</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1099</span>     <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1100</span>     <span class="n">stream_cls</span><span class="o">=</span><span class="n">stream_cls</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1101</span> <span class="p">)</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\openai\_base_client.py:1046,</span> in <span class="ni">SyncAPIClient._request</span><span class="nt">(self, cast_to, options, retries_taken, stream, stream_cls)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1044</span> <span class="k">if</span> <span class="n">remaining_retries</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_should_retry</span><span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="n">response</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1045</span>     <span class="n">err</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="ne">-&gt; </span><span class="mi">1046</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_retry_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1047</span>         <span class="n">input_options</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1048</span>         <span class="n">cast_to</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1049</span>         <span class="n">retries_taken</span><span class="o">=</span><span class="n">retries_taken</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1050</span>         <span class="n">response_headers</span><span class="o">=</span><span class="n">err</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1051</span>         <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1052</span>         <span class="n">stream_cls</span><span class="o">=</span><span class="n">stream_cls</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1053</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1055</span> <span class="c1"># If the response is streamed then we need to explicitly read the response</span>
+<span class="g g-Whitespace">   </span><span class="mi">1056</span> <span class="c1"># to completion before attempting to access the response text.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1057</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">err</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">is_closed</span><span class="p">:</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\openai\_base_client.py:1095,</span> in <span class="ni">SyncAPIClient._retry_request</span><span class="nt">(self, options, cast_to, retries_taken, response_headers, stream, stream_cls)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1091</span> <span class="c1"># In a synchronous context we are blocking the entire thread. Up to the library user to run the client in a</span>
+<span class="g g-Whitespace">   </span><span class="mi">1092</span> <span class="c1"># different thread if necessary.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1093</span> <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">timeout</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1095</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1096</span>     <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1097</span>     <span class="n">cast_to</span><span class="o">=</span><span class="n">cast_to</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1098</span>     <span class="n">retries_taken</span><span class="o">=</span><span class="n">retries_taken</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1099</span>     <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1100</span>     <span class="n">stream_cls</span><span class="o">=</span><span class="n">stream_cls</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1101</span> <span class="p">)</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\openai\_base_client.py:1046,</span> in <span class="ni">SyncAPIClient._request</span><span class="nt">(self, cast_to, options, retries_taken, stream, stream_cls)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1044</span> <span class="k">if</span> <span class="n">remaining_retries</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_should_retry</span><span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="n">response</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1045</span>     <span class="n">err</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="ne">-&gt; </span><span class="mi">1046</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_retry_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1047</span>         <span class="n">input_options</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1048</span>         <span class="n">cast_to</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1049</span>         <span class="n">retries_taken</span><span class="o">=</span><span class="n">retries_taken</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1050</span>         <span class="n">response_headers</span><span class="o">=</span><span class="n">err</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1051</span>         <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1052</span>         <span class="n">stream_cls</span><span class="o">=</span><span class="n">stream_cls</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1053</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1055</span> <span class="c1"># If the response is streamed then we need to explicitly read the response</span>
+<span class="g g-Whitespace">   </span><span class="mi">1056</span> <span class="c1"># to completion before attempting to access the response text.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1057</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">err</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">is_closed</span><span class="p">:</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\openai\_base_client.py:1095,</span> in <span class="ni">SyncAPIClient._retry_request</span><span class="nt">(self, options, cast_to, retries_taken, response_headers, stream, stream_cls)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1091</span> <span class="c1"># In a synchronous context we are blocking the entire thread. Up to the library user to run the client in a</span>
+<span class="g g-Whitespace">   </span><span class="mi">1092</span> <span class="c1"># different thread if necessary.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1093</span> <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">timeout</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1095</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1096</span>     <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1097</span>     <span class="n">cast_to</span><span class="o">=</span><span class="n">cast_to</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1098</span>     <span class="n">retries_taken</span><span class="o">=</span><span class="n">retries_taken</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1099</span>     <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1100</span>     <span class="n">stream_cls</span><span class="o">=</span><span class="n">stream_cls</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1101</span> <span class="p">)</span>
+
+<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\openai\_base_client.py:1061,</span> in <span class="ni">SyncAPIClient._request</span><span class="nt">(self, cast_to, options, retries_taken, stream, stream_cls)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1058</span>         <span class="n">err</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1060</span>     <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Re-raising status error&quot;</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1061</span>     <span class="k">raise</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_status_error_from_response</span><span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="n">response</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1063</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_process_response</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1064</span>     <span class="n">cast_to</span><span class="o">=</span><span class="n">cast_to</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1065</span>     <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1069</span>     <span class="n">retries_taken</span><span class="o">=</span><span class="n">retries_taken</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1070</span> <span class="p">)</span>
+
+<span class="ne">InternalServerError</span>: Error code: 500 - {&#39;error&#39;: {&#39;message&#39;: &#39;litellm.APIError: APIError: OpenAIException - Connection error.\nReceived Model Group=meta-llama/Llama-3.3-70B-Instruct\nAvailable Model Group Fallbacks=None\nError doing the fallback: list index out of range&#39;, &#39;type&#39;: None, &#39;param&#39;: None, &#39;code&#39;: &#39;500&#39;}}
+</pre></div>
+</div>
+</div>
+</div>
+<section id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h2>
+<p>The following language models are available on the Server. Find out which of those are capable of generating a slide deck.
+E.g. run the prompt above for every LLM 10 times and count how often a pptx file is created.</p>
+<p>Hints:</p>
+<ul class="simple">
+<li><p>You may have to specify the pptx filename to make this work.</p></li>
+<li><p>To see what the agent is doing under the hood, consider setting <code class="docutils literal notranslate"><span class="pre">verbose=True</span></code>.</p></li>
+</ul>
+<p>Available models are:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">openai</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">openai</span><span class="o">.</span><span class="n">OpenAI</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="s2">&quot;https://llm.scads.ai/v1&quot;</span><span class="p">,</span>
+                       <span class="n">api_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;SCADSAI_API_KEY&#39;</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">model</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">client</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">list</span><span class="p">()</span><span class="o">.</span><span class="n">data</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./66_arxiv_agent"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+            </article>
+            
+
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="../50_function_calling/12_function_calling_scadsai_llm.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Function calling using ScaDS.AI’s LLM service</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="multiagent_write_review.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">A multi-agent system writing a manuscript</p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
+  </a>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise">
+   Exercise
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Robert Haase
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+Last updated on 2025-02-24.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+Copyright: Licensed <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-BY 4.0</a> unless mentioned otherwise. 
+Contributions and feedback are welcome.
+</p>
+
+</div>
+  </div>
+  
+</div>
+          </div>
+        </footer>
+        
+
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  </body>
+</html>
