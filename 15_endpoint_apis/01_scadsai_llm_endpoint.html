@@ -247,27 +247,6 @@ const thebe_selector_output = ".output, .cell_output"
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../66_arxiv_agent/arxiv_powerpoint_karaoke.html">
-                        PowerPoint Karaoke about Arxiv papers
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../66_arxiv_agent/multiagent_write_review.html">
-                        A multi-agent system writing a manuscript
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../66_arxiv_agent/simplifying_agentic_workflows.html">
-                        Simplifing agentic workflows
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../imprint.html">
                         Imprint
                       </a>
@@ -457,27 +436,6 @@ const thebe_selector_output = ".output, .cell_output"
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../66_arxiv_agent/arxiv_powerpoint_karaoke.html">
-                        PowerPoint Karaoke about Arxiv papers
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../66_arxiv_agent/multiagent_write_review.html">
-                        A multi-agent system writing a manuscript
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../66_arxiv_agent/simplifying_agentic_workflows.html">
-                        Simplifing agentic workflows
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../imprint.html">
                         Imprint
                       </a>
@@ -586,9 +544,6 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Agents</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../50_function_calling/12_function_calling_scadsai_llm.html">Function calling using ScaDS.AI’s LLM service</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../66_arxiv_agent/arxiv_powerpoint_karaoke.html">PowerPoint Karaoke about Arxiv papers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../66_arxiv_agent/multiagent_write_review.html">A multi-agent system writing a manuscript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../66_arxiv_agent/simplifying_agentic_workflows.html">Simplifing agentic workflows</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Links</span></p>
 <ul class="nav bd-sidenav">
@@ -793,7 +748,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1.58.1&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1.64.0&#39;
 </pre></div>
 </div>
 </div>
@@ -833,170 +788,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">InternalServerError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">prompt_scadsai_llm</span><span class="p">(</span><span class="s2">&quot;Hi!&quot;</span><span class="p">))</span>
-
-<span class="nn">Cell In[2], line 16,</span> in <span class="ni">prompt_scadsai_llm</span><span class="nt">(message, model)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="c1"># setup connection to the LLM</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">client</span> <span class="o">=</span> <span class="n">openai</span><span class="o">.</span><span class="n">OpenAI</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="s2">&quot;https://llm.scads.ai/v1&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>                        <span class="n">api_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;SCADSAI_API_KEY&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">16</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span>     <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span>     <span class="n">messages</span><span class="o">=</span><span class="n">message</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="c1"># extract answer</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span>
-
-<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\openai\_utils\_utils.py:275,</span> in <span class="ni">required_args.&lt;locals&gt;.inner.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">273</span>             <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Missing required argument: </span><span class="si">{</span><span class="n">quote</span><span class="p">(</span><span class="n">missing</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">274</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">275</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\openai\resources\chat\completions.py:859,</span> in <span class="ni">Completions.create</span><span class="nt">(self, messages, model, audio, frequency_penalty, function_call, functions, logit_bias, logprobs, max_completion_tokens, max_tokens, metadata, modalities, n, parallel_tool_calls, prediction, presence_penalty, reasoning_effort, response_format, seed, service_tier, stop, store, stream, stream_options, temperature, tool_choice, tools, top_logprobs, top_p, user, extra_headers, extra_query, extra_body, timeout)</span>
-<span class="g g-Whitespace">    </span><span class="mi">817</span> <span class="nd">@required_args</span><span class="p">([</span><span class="s2">&quot;messages&quot;</span><span class="p">,</span> <span class="s2">&quot;model&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;messages&quot;</span><span class="p">,</span> <span class="s2">&quot;model&quot;</span><span class="p">,</span> <span class="s2">&quot;stream&quot;</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">818</span> <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">819</span>     <span class="bp">self</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">856</span>     <span class="n">timeout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="n">httpx</span><span class="o">.</span><span class="n">Timeout</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">|</span> <span class="n">NotGiven</span> <span class="o">=</span> <span class="n">NOT_GIVEN</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">857</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ChatCompletion</span> <span class="o">|</span> <span class="n">Stream</span><span class="p">[</span><span class="n">ChatCompletionChunk</span><span class="p">]:</span>
-<span class="g g-Whitespace">    </span><span class="mi">858</span>     <span class="n">validate_response_format</span><span class="p">(</span><span class="n">response_format</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">859</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_post</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">860</span>         <span class="s2">&quot;/chat/completions&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">861</span>         <span class="n">body</span><span class="o">=</span><span class="n">maybe_transform</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">862</span>             <span class="p">{</span>
-<span class="g g-Whitespace">    </span><span class="mi">863</span>                 <span class="s2">&quot;messages&quot;</span><span class="p">:</span> <span class="n">messages</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">864</span>                 <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">model</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">865</span>                 <span class="s2">&quot;audio&quot;</span><span class="p">:</span> <span class="n">audio</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">866</span>                 <span class="s2">&quot;frequency_penalty&quot;</span><span class="p">:</span> <span class="n">frequency_penalty</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">867</span>                 <span class="s2">&quot;function_call&quot;</span><span class="p">:</span> <span class="n">function_call</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">868</span>                 <span class="s2">&quot;functions&quot;</span><span class="p">:</span> <span class="n">functions</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">869</span>                 <span class="s2">&quot;logit_bias&quot;</span><span class="p">:</span> <span class="n">logit_bias</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">870</span>                 <span class="s2">&quot;logprobs&quot;</span><span class="p">:</span> <span class="n">logprobs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">871</span>                 <span class="s2">&quot;max_completion_tokens&quot;</span><span class="p">:</span> <span class="n">max_completion_tokens</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">872</span>                 <span class="s2">&quot;max_tokens&quot;</span><span class="p">:</span> <span class="n">max_tokens</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">873</span>                 <span class="s2">&quot;metadata&quot;</span><span class="p">:</span> <span class="n">metadata</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">874</span>                 <span class="s2">&quot;modalities&quot;</span><span class="p">:</span> <span class="n">modalities</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">875</span>                 <span class="s2">&quot;n&quot;</span><span class="p">:</span> <span class="n">n</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">876</span>                 <span class="s2">&quot;parallel_tool_calls&quot;</span><span class="p">:</span> <span class="n">parallel_tool_calls</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">877</span>                 <span class="s2">&quot;prediction&quot;</span><span class="p">:</span> <span class="n">prediction</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">878</span>                 <span class="s2">&quot;presence_penalty&quot;</span><span class="p">:</span> <span class="n">presence_penalty</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">879</span>                 <span class="s2">&quot;reasoning_effort&quot;</span><span class="p">:</span> <span class="n">reasoning_effort</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">880</span>                 <span class="s2">&quot;response_format&quot;</span><span class="p">:</span> <span class="n">response_format</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">881</span>                 <span class="s2">&quot;seed&quot;</span><span class="p">:</span> <span class="n">seed</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">882</span>                 <span class="s2">&quot;service_tier&quot;</span><span class="p">:</span> <span class="n">service_tier</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">883</span>                 <span class="s2">&quot;stop&quot;</span><span class="p">:</span> <span class="n">stop</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">884</span>                 <span class="s2">&quot;store&quot;</span><span class="p">:</span> <span class="n">store</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">885</span>                 <span class="s2">&quot;stream&quot;</span><span class="p">:</span> <span class="n">stream</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">886</span>                 <span class="s2">&quot;stream_options&quot;</span><span class="p">:</span> <span class="n">stream_options</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">887</span>                 <span class="s2">&quot;temperature&quot;</span><span class="p">:</span> <span class="n">temperature</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">888</span>                 <span class="s2">&quot;tool_choice&quot;</span><span class="p">:</span> <span class="n">tool_choice</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">889</span>                 <span class="s2">&quot;tools&quot;</span><span class="p">:</span> <span class="n">tools</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">890</span>                 <span class="s2">&quot;top_logprobs&quot;</span><span class="p">:</span> <span class="n">top_logprobs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">891</span>                 <span class="s2">&quot;top_p&quot;</span><span class="p">:</span> <span class="n">top_p</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">892</span>                 <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="n">user</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">893</span>             <span class="p">},</span>
-<span class="g g-Whitespace">    </span><span class="mi">894</span>             <span class="n">completion_create_params</span><span class="o">.</span><span class="n">CompletionCreateParams</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">895</span>         <span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">896</span>         <span class="n">options</span><span class="o">=</span><span class="n">make_request_options</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">897</span>             <span class="n">extra_headers</span><span class="o">=</span><span class="n">extra_headers</span><span class="p">,</span> <span class="n">extra_query</span><span class="o">=</span><span class="n">extra_query</span><span class="p">,</span> <span class="n">extra_body</span><span class="o">=</span><span class="n">extra_body</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span>
-<span class="g g-Whitespace">    </span><span class="mi">898</span>         <span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">899</span>         <span class="n">cast_to</span><span class="o">=</span><span class="n">ChatCompletion</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">900</span>         <span class="n">stream</span><span class="o">=</span><span class="n">stream</span> <span class="ow">or</span> <span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">901</span>         <span class="n">stream_cls</span><span class="o">=</span><span class="n">Stream</span><span class="p">[</span><span class="n">ChatCompletionChunk</span><span class="p">],</span>
-<span class="g g-Whitespace">    </span><span class="mi">902</span>     <span class="p">)</span>
-
-<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\openai\_base_client.py:1280,</span> in <span class="ni">SyncAPIClient.post</span><span class="nt">(self, path, cast_to, body, options, files, stream, stream_cls)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1266</span> <span class="k">def</span><span class="w"> </span><span class="nf">post</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1267</span>     <span class="bp">self</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1268</span>     <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1275</span>     <span class="n">stream_cls</span><span class="p">:</span> <span class="nb">type</span><span class="p">[</span><span class="n">_StreamT</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1276</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ResponseT</span> <span class="o">|</span> <span class="n">_StreamT</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1277</span>     <span class="n">opts</span> <span class="o">=</span> <span class="n">FinalRequestOptions</span><span class="o">.</span><span class="n">construct</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1278</span>         <span class="n">method</span><span class="o">=</span><span class="s2">&quot;post&quot;</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">path</span><span class="p">,</span> <span class="n">json_data</span><span class="o">=</span><span class="n">body</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">to_httpx_files</span><span class="p">(</span><span class="n">files</span><span class="p">),</span> <span class="o">**</span><span class="n">options</span>
-<span class="g g-Whitespace">   </span><span class="mi">1279</span>     <span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1280</span>     <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">ResponseT</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">cast_to</span><span class="p">,</span> <span class="n">opts</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">,</span> <span class="n">stream_cls</span><span class="o">=</span><span class="n">stream_cls</span><span class="p">))</span>
-
-<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\openai\_base_client.py:957,</span> in <span class="ni">SyncAPIClient.request</span><span class="nt">(self, cast_to, options, remaining_retries, stream, stream_cls)</span>
-<span class="g g-Whitespace">    </span><span class="mi">954</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">955</span>     <span class="n">retries_taken</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="ne">--&gt; </span><span class="mi">957</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">958</span>     <span class="n">cast_to</span><span class="o">=</span><span class="n">cast_to</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">959</span>     <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">960</span>     <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">961</span>     <span class="n">stream_cls</span><span class="o">=</span><span class="n">stream_cls</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">962</span>     <span class="n">retries_taken</span><span class="o">=</span><span class="n">retries_taken</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">963</span> <span class="p">)</span>
-
-<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\openai\_base_client.py:1046,</span> in <span class="ni">SyncAPIClient._request</span><span class="nt">(self, cast_to, options, retries_taken, stream, stream_cls)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1044</span> <span class="k">if</span> <span class="n">remaining_retries</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_should_retry</span><span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="n">response</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1045</span>     <span class="n">err</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<span class="ne">-&gt; </span><span class="mi">1046</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_retry_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1047</span>         <span class="n">input_options</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1048</span>         <span class="n">cast_to</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1049</span>         <span class="n">retries_taken</span><span class="o">=</span><span class="n">retries_taken</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1050</span>         <span class="n">response_headers</span><span class="o">=</span><span class="n">err</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1051</span>         <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1052</span>         <span class="n">stream_cls</span><span class="o">=</span><span class="n">stream_cls</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1053</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1055</span> <span class="c1"># If the response is streamed then we need to explicitly read the response</span>
-<span class="g g-Whitespace">   </span><span class="mi">1056</span> <span class="c1"># to completion before attempting to access the response text.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1057</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">err</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">is_closed</span><span class="p">:</span>
-
-<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\openai\_base_client.py:1095,</span> in <span class="ni">SyncAPIClient._retry_request</span><span class="nt">(self, options, cast_to, retries_taken, response_headers, stream, stream_cls)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1091</span> <span class="c1"># In a synchronous context we are blocking the entire thread. Up to the library user to run the client in a</span>
-<span class="g g-Whitespace">   </span><span class="mi">1092</span> <span class="c1"># different thread if necessary.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1093</span> <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">timeout</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1095</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1096</span>     <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1097</span>     <span class="n">cast_to</span><span class="o">=</span><span class="n">cast_to</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1098</span>     <span class="n">retries_taken</span><span class="o">=</span><span class="n">retries_taken</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1099</span>     <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1100</span>     <span class="n">stream_cls</span><span class="o">=</span><span class="n">stream_cls</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1101</span> <span class="p">)</span>
-
-<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\openai\_base_client.py:1046,</span> in <span class="ni">SyncAPIClient._request</span><span class="nt">(self, cast_to, options, retries_taken, stream, stream_cls)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1044</span> <span class="k">if</span> <span class="n">remaining_retries</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_should_retry</span><span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="n">response</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1045</span>     <span class="n">err</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<span class="ne">-&gt; </span><span class="mi">1046</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_retry_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1047</span>         <span class="n">input_options</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1048</span>         <span class="n">cast_to</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1049</span>         <span class="n">retries_taken</span><span class="o">=</span><span class="n">retries_taken</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1050</span>         <span class="n">response_headers</span><span class="o">=</span><span class="n">err</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1051</span>         <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1052</span>         <span class="n">stream_cls</span><span class="o">=</span><span class="n">stream_cls</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1053</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1055</span> <span class="c1"># If the response is streamed then we need to explicitly read the response</span>
-<span class="g g-Whitespace">   </span><span class="mi">1056</span> <span class="c1"># to completion before attempting to access the response text.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1057</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">err</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">is_closed</span><span class="p">:</span>
-
-<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\openai\_base_client.py:1095,</span> in <span class="ni">SyncAPIClient._retry_request</span><span class="nt">(self, options, cast_to, retries_taken, response_headers, stream, stream_cls)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1091</span> <span class="c1"># In a synchronous context we are blocking the entire thread. Up to the library user to run the client in a</span>
-<span class="g g-Whitespace">   </span><span class="mi">1092</span> <span class="c1"># different thread if necessary.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1093</span> <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">timeout</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1095</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1096</span>     <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1097</span>     <span class="n">cast_to</span><span class="o">=</span><span class="n">cast_to</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1098</span>     <span class="n">retries_taken</span><span class="o">=</span><span class="n">retries_taken</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1099</span>     <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1100</span>     <span class="n">stream_cls</span><span class="o">=</span><span class="n">stream_cls</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1101</span> <span class="p">)</span>
-
-<span class="nn">File ~\miniforge3\envs\genai-gpu\Lib\site-packages\openai\_base_client.py:1061,</span> in <span class="ni">SyncAPIClient._request</span><span class="nt">(self, cast_to, options, retries_taken, stream, stream_cls)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1058</span>         <span class="n">err</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1060</span>     <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Re-raising status error&quot;</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1061</span>     <span class="k">raise</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_status_error_from_response</span><span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="n">response</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="kc">None</span>
-<span class="g g-Whitespace">   </span><span class="mi">1063</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_process_response</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1064</span>     <span class="n">cast_to</span><span class="o">=</span><span class="n">cast_to</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1065</span>     <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1069</span>     <span class="n">retries_taken</span><span class="o">=</span><span class="n">retries_taken</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1070</span> <span class="p">)</span>
-
-<span class="ne">InternalServerError</span>: Error code: 500 - {&#39;error&#39;: {&#39;message&#39;: &#39;litellm.APIError: APIError: OpenAIException - Connection error.\nReceived Model Group=meta-llama/Llama-3.3-70B-Instruct\nAvailable Model Group Fallbacks=None\nError doing the fallback: list index out of range&#39;, &#39;type&#39;: None, &#39;param&#39;: None, &#39;code&#39;: &#39;500&#39;}}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>It&#39;s nice to meet you. Is there something I can help you with or would you like to chat?
 </pre></div>
 </div>
 </div>
@@ -1005,6 +797,48 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">prompt_scadsai_llm</span><span class="p">(</span><span class="s2">&quot;What is the meaning of life?&quot;</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">&quot;deepseek-ai/DeepSeek-R1&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Okay, the user is asking about the meaning of life. That&#39;s a big question. I need to approach this carefully. Where do I start?
+
+First, I remember that different fields have different takes. Philosophy, religion, science, and personal beliefs each have their own perspectives. Maybe I should outline each one.
+
+Philosophy: Existentialists like Sartre and Camus say we create our own meaning. Absurdism, as per Camus, accepts the search for meaning in a meaningless world. Nietzsche talks about the will to power and creating your own values. Then there&#39;s religious views. Christianity and Islam often point to serving a divine purpose. Eastern religions like Buddhism and Hinduism might focus on enlightenment and escaping suffering through cycles of rebirth.
+
+Science: Evolutionary perspective might say reproduction and survival. But that&#39;s more of a &#39;how&#39; than a &#39;why.&#39; Neuroscientists might link meaning to brain functions related to happiness and social bonds.
+
+Personal meaning: Many people find purpose in relationships, creativity, helping others, personal goals. Maybe mention Viktor Frankl&#39;s &quot;Man&#39;s Search for Meaning,&quot; where he says meaning comes from what we give to the world, our relationships, our attitudes.
+
+Should I mention that there&#39;s no single answer? Yes, it&#39;s important to note that it&#39;s subjective. Also, the user might be looking for reassurance or different viewpoints rather than a definitive answer.
+
+Wait, do I need to address any potential follow-up questions? Like, why do people ask this? Or how to find personal meaning? Maybe touch on that briefly but stay concise.
+
+Check for any cultural considerations. The answer shouldn&#39;t favor any religion or belief system. Keep it neutral and inclusive.
+
+Finally, wrap it up by emphasizing the personal journey aspect. Encourage reflection on values, passions, and impact. That should cover it without being too prescriptive.
+&lt;/think&gt;
+
+The question of the meaning of life is deeply subjective and has been explored through various lenses, including philosophy, religion, science, and personal experience. Here’s a concise overview of different perspectives:
+
+1. **Philosophical Perspectives**:
+   - **Existentialism**: Proposes that individuals create their own meaning through choices and actions (e.g., Sartre, Camus). Camus&#39; &quot;absurdism&quot; argues that embracing life’s lack of inherent meaning is key to living authentically.
+   - **Nihilism**: Suggests life has no intrinsic meaning, but this can be liberating rather than despairing.
+   - **Stoicism**: Advocates finding purpose in virtue, acceptance, and living in harmony with nature.
+
+2. **Religious/Spiritual Views**:
+   - **Theistic Religions** (e.g., Christianity, Islam, Hinduism): Often tie life’s purpose to divine connection, moral growth, or transcending suffering (e.g., moksha, nirvana, union with God).
+   - **Buddhism**: Emphasizes ending suffering (dukkha) through enlightenment and compassion.
+
+3. **Scientific Angles**:
+   - **Biology/Evolution**: Life’s &quot;purpose&quot; may relate to survival, reproduction, and adaptation. However, science typically explains &quot;how&quot; rather than &quot;why.&quot;
+   - **Cosmic Perspective**: Some find awe in the universe’s vastness and our fleeting but conscious role within it.
+
+4. **Personal Meaning**:
+   - Many derive meaning from relationships, creativity, helping others, pursuit of knowledge, or personal goals. Viktor Frankl, in *Man’s Search for Meaning*, argues meaning arises from our responses to life’s challenges, our contributions, and our attitudes.
+
+**In Short**: There’s no universally agreed-upon answer. The search itself may be part of the journey—a chance to reflect on values, passions, and the legacy one wishes to leave. What gives *your* life meaning?
 </pre></div>
 </div>
 </div>
@@ -1019,6 +853,21 @@ title="Print to PDF"
                        <span class="n">api_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;SCADSAI_API_KEY&#39;</span><span class="p">))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">model</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">client</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">list</span><span class="p">()</span><span class="o">.</span><span class="n">data</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mistral-7b-q4
+deepseek-ai/DeepSeek-R1
+CohereForAI/c4ai-command-r-08-2024
+tts-1-hd
+deepseek-ai/DeepSeek-R1-Distill-Qwen-32B
+openGPT-X/Teuken-7B-instruct-research-v0.4
+en-de-translator
+Alibaba-NLP/gte-Qwen2-1.5B-instruct
+deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct
+meta-llama/Llama-3.3-70B-Instruct
+Qwen/Qwen2-VL-7B-Instruct
 </pre></div>
 </div>
 </div>
@@ -1122,7 +971,7 @@ By Robert Haase
   
   <div class="footer-item">
     <p class="last-updated">
-Last updated on 2025-02-24.<br>
+Last updated on 2025-02-25.<br>
 </p>
   </div>
   

@@ -245,27 +245,6 @@ const thebe_selector_output = ".output, .cell_output"
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../66_arxiv_agent/arxiv_powerpoint_karaoke.html">
-                        PowerPoint Karaoke about Arxiv papers
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../66_arxiv_agent/multiagent_write_review.html">
-                        A multi-agent system writing a manuscript
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../66_arxiv_agent/simplifying_agentic_workflows.html">
-                        Simplifing agentic workflows
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../imprint.html">
                         Imprint
                       </a>
@@ -455,27 +434,6 @@ const thebe_selector_output = ".output, .cell_output"
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../66_arxiv_agent/arxiv_powerpoint_karaoke.html">
-                        PowerPoint Karaoke about Arxiv papers
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../66_arxiv_agent/multiagent_write_review.html">
-                        A multi-agent system writing a manuscript
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../66_arxiv_agent/simplifying_agentic_workflows.html">
-                        Simplifing agentic workflows
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../imprint.html">
                         Imprint
                       </a>
@@ -584,9 +542,6 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Agents</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../50_function_calling/12_function_calling_scadsai_llm.html">Function calling using ScaDS.AI’s LLM service</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../66_arxiv_agent/arxiv_powerpoint_karaoke.html">PowerPoint Karaoke about Arxiv papers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../66_arxiv_agent/multiagent_write_review.html">A multi-agent system writing a manuscript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../66_arxiv_agent/simplifying_agentic_workflows.html">Simplifing agentic workflows</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Links</span></p>
 <ul class="nav bd-sidenav">
@@ -851,15 +806,25 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">20</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span>     <span class="k">return</span> <span class="n">prompt</span><span class="p">(</span><span class="n">prompt_text</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="c1"># Test the function</span>
-<span class="ne">---&gt; </span><span class="mi">20</span> <span class="n">sample_data</span> <span class="o">=</span> <span class="n">customer_generator</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="nb">print</span><span class="p">(</span><span class="n">sample_data</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;customer_generator&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;name&quot;: &quot;Emily Johnson&quot;,
+    &quot;gender&quot;: &quot;Female&quot;,
+    &quot;age&quot;: 31,
+    &quot;income&quot;: 60000.0,
+    &quot;household_size&quot;: 3,
+    &quot;grocery_list&quot;: [
+        {&quot;item&quot;: &quot;Milk&quot;, &quot;price&quot;: 2.99},
+        {&quot;item&quot;: &quot;Bread&quot;, &quot;price&quot;: 1.49},
+        {&quot;item&quot;: &quot;Eggs&quot;, &quot;price&quot;: 1.99},
+        {&quot;item&quot;: &quot;Chicken Breast&quot;, &quot;price&quot;: 8.99},
+        {&quot;item&quot;: &quot;Apples&quot;, &quot;price&quot;: 3.49},
+        {&quot;item&quot;: &quot;Carrots&quot;, &quot;price&quot;: 0.69},
+        {&quot;item&quot;: &quot;Pasta&quot;, &quot;price&quot;: 1.29},
+        {&quot;item&quot;: &quot;Marinara Sauce&quot;, &quot;price&quot;: 2.49},
+        {&quot;item&quot;: &quot;Shredded Cheese&quot;, &quot;price&quot;: 3.99},
+        {&quot;item&quot;: &quot;Greek Yogurt&quot;, &quot;price&quot;: 2.79}
+    ]
+}
 </pre></div>
 </div>
 </div>
@@ -882,6 +847,17 @@ title="Print to PDF"
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid JSON format in record </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Collected </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">customer_records</span><span class="p">)</span><span class="si">}</span><span class="s2"> valid customer records&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████| 100/100 [14:25&lt;00:00,  8.66s/it]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collected 100 valid customer records
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -919,6 +895,137 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>gender</th>
+      <th>age</th>
+      <th>income</th>
+      <th>household_size</th>
+      <th>weekly_spending</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Emily Chen</td>
+      <td>Female</td>
+      <td>32</td>
+      <td>75000.0</td>
+      <td>3</td>
+      <td>66.19</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Emily Wilson</td>
+      <td>Female</td>
+      <td>32</td>
+      <td>55000.0</td>
+      <td>3</td>
+      <td>35.51</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Emily Chen</td>
+      <td>Female</td>
+      <td>32</td>
+      <td>75000.0</td>
+      <td>3</td>
+      <td>38.00</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Emily Chen</td>
+      <td>Female</td>
+      <td>32</td>
+      <td>75000.0</td>
+      <td>3</td>
+      <td>41.10</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Emily Chen</td>
+      <td>Female</td>
+      <td>32</td>
+      <td>75000.0</td>
+      <td>3</td>
+      <td>35.71</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>Emily Wilson</td>
+      <td>Female</td>
+      <td>32</td>
+      <td>55000.0</td>
+      <td>3</td>
+      <td>33.30</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>Emily Johnson</td>
+      <td>Female</td>
+      <td>32</td>
+      <td>55000.0</td>
+      <td>3</td>
+      <td>29.91</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>Emily Wilson</td>
+      <td>Female</td>
+      <td>32</td>
+      <td>55000.0</td>
+      <td>3</td>
+      <td>41.20</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>Emily Wilson</td>
+      <td>Female</td>
+      <td>32</td>
+      <td>55000.0</td>
+      <td>3</td>
+      <td>25.41</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>Emily Wilson</td>
+      <td>Female</td>
+      <td>32</td>
+      <td>55000.0</td>
+      <td>3</td>
+      <td>37.70</td>
+    </tr>
+  </tbody>
+</table>
+<p>100 rows × 6 columns</p>
+</div></div></div>
 </div>
 </section>
 <section id="visualize-relationships-in-the-data">
@@ -946,6 +1053,9 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/6d67d11da665fff71f174b6cda4668d6699bbb56499c7bd973b1256ab535a0ed.png" src="../_images/6d67d11da665fff71f174b6cda4668d6699bbb56499c7bd973b1256ab535a0ed.png" />
+</div>
 </div>
 </section>
 <section id="additional-analysis-shopping-patterns-by-gender">
@@ -959,6 +1069,9 @@ title="Print to PDF"
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/9e40685c4690779269c30e98935044df401db437a0bbc649f1990191d94adce7.png" src="../_images/9e40685c4690779269c30e98935044df401db437a0bbc649f1990191d94adce7.png" />
 </div>
 </div>
 </section>
@@ -1070,7 +1183,7 @@ By Robert Haase
   
   <div class="footer-item">
     <p class="last-updated">
-Last updated on 2025-02-24.<br>
+Last updated on 2025-02-25.<br>
 </p>
   </div>
   
