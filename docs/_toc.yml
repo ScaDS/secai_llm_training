@@ -40,9 +40,7 @@ parts:
   - caption: Agents
     chapters:
     - file: 50_function_calling/12_function_calling_scadsai_llm.ipynb
-    - file: 66_arxiv_agent/arxiv_powerpoint_karaoke.ipynb
-    - file: 66_arxiv_agent/multiagent_write_review.ipynb
-    - file: 66_arxiv_agent/simplifying_agentic_workflows.ipynb
+
 
   - caption: Links
     chapters:
