@@ -23,8 +23,7 @@ parts:
 
   - caption: Retrieval Augmented Generation (RAG)
     chapters:
-
-    - file: 33_chat_with_docs/readme.md
+    - file: 33_chat_with_docs/text-embeddings.ipynb
     - file: 33_chat_with_docs/chat-with-docs.ipynb
     - file: 33_chat_with_docs/hpc-compendium-prepare-data.ipynb
     - file: 33_chat_with_docs/long-context-prompting.ipynb
