@@ -30,12 +30,6 @@ parts:
     - file: 33_chat_with_docs/long-context-prompting.ipynb
     - file: 33_chat_with_docs/chat-with-hpc-compendium.ipynb
     - file: 33_chat_with_docs/llm-based-rag.ipynb
-      
-  - caption: Multi-modal LLMs
-    chapters:
-
-    - file: 47_vision/22_vision_qwen.ipynb
-    - file: 47_vision/20_vision_ollama.ipynb
 
   - caption: Agents
     chapters:
