@@ -45,7 +45,7 @@ You will need a VPN-connection to TU Dresden. Install everything necessary as ex
 
 ## Setting up API keys
 
-For executing the exercises in this notebook collection, it is recommended to get a [ScaDS.AI API Key](https://llm.scads.ai/)). For the attendees at the training, a key will be [provided](api_key.zip). If you want to use the notebooks later on, you need to get your own ScaDS.AI API key. Some notebooks will also work with [Kisski/GWDG](https://kisski.gwdg.de/en/leistungen/2-02-llm-service/) and [Blablador/Helmholtz](https://sdlaml.pages.jsc.fz-juelich.de/ai/guides/blablador_api_access/) API Keys. These services are free to use for Germen academics.
+For executing the exercises in this notebook collection, you will get a ScaDS.AI API Key: [download ZIP](api_key.zip); the password will be provided on-site. If you want to use the notebooks later on, you need to get your own ScaDS.AI API key. Some notebooks will also work with [Kisski/GWDG](https://kisski.gwdg.de/en/leistungen/2-02-llm-service/) and [Blablador/Helmholtz](https://sdlaml.pages.jsc.fz-juelich.de/ai/guides/blablador_api_access/) API Keys. These services are free to use for Germen academics.
 
 You can then save these keys in the environment variables, e.g. as `SCADSAI_API_KEY`, `BLABLADOR_API_KEY` and/or `KISSKI_API_KEY` of your computer as explained [on this page](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety).
 
