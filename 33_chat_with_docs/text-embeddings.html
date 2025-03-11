@@ -275,6 +275,20 @@ const thebe_selector_output = ".output, .cell_output"
                 
 
                     <li class="nav-item">
+                      <a class="nav-link nav-external" href="https://zenodo.org/records/15006767">
+                        Download Slides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-external" href="https://creativecommons.org/licenses/by/4.0/">
+                        License CC-BY 4.0
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../imprint.html">
                         Imprint
                       </a>
@@ -492,6 +506,20 @@ const thebe_selector_output = ".output, .cell_output"
                 
 
                     <li class="nav-item">
+                      <a class="nav-link nav-external" href="https://zenodo.org/records/15006767">
+                        Download Slides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-external" href="https://creativecommons.org/licenses/by/4.0/">
+                        License CC-BY 4.0
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../imprint.html">
                         Imprint
                       </a>
@@ -608,6 +636,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Links</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://zenodo.org/records/15006767">Download Slides</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">License CC-BY 4.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../imprint.html">Imprint</a></li>
 
 </ul>
@@ -805,7 +835,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">llama_index.embeddings.huggingface</span><span class="w"> </span><span class="kn">import</span> <span class="n">HuggingFaceEmbedding</span>
 
-<span class="n">embed_model</span> <span class="o">=</span> <span class="n">HuggingFaceEmbedding</span><span class="p">(</span><span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;intfloat/multilingual-e5-large-instruct&quot;</span><span class="p">)</span>
+<span class="n">embed_model</span> <span class="o">=</span> <span class="n">HuggingFaceEmbedding</span><span class="p">(</span><span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;BAAI/bge-base-en-v1.5&quot;</span><span class="p">)</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">embed</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">embed_model</span><span class="o">.</span><span class="n">_get_text_embedding</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
@@ -821,7 +851,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.0052167209796607494, 0.025283105671405792, 0.00728016160428524]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.010724288411438465, 0.05578271672129631, 0.027084119617938995]
 </pre></div>
 </div>
 </div>
@@ -833,14 +863,14 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1024
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>768
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;dog&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;hamster&quot;</span><span class="p">,</span> <span class="s2">&quot;guinea pig&quot;</span><span class="p">,</span> <span class="s2">&quot;pet&quot;</span><span class="p">,</span> <span class="s2">&quot;microscope&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;dog&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;hamster&quot;</span><span class="p">,</span> <span class="s2">&quot;guinea pig&quot;</span><span class="p">,</span> <span class="s2">&quot;pet&quot;</span><span class="p">,</span> <span class="s2">&quot;microscope&quot;</span><span class="p">,</span> <span class="s2">&quot;compute&quot;</span><span class="p">,</span> <span class="s2">&quot;cloud&quot;</span><span class="p">,</span> <span class="s2">&quot;high-performance-computing&quot;</span><span class="p">]</span>
 
 <span class="c1"># Example of input dictionary</span>
 <span class="n">object_coords</span> <span class="o">=</span> <span class="p">{</span><span class="n">word</span><span class="p">:</span> <span class="n">embed</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">}</span>
@@ -874,7 +904,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/61bd2c2dcf6b851f941e63f2792c520f2615db906dd3c29d49646ad65c7aa3ad.png" src="../_images/61bd2c2dcf6b851f941e63f2792c520f2615db906dd3c29d49646ad65c7aa3ad.png" />
+<img alt="../_images/7dffab4e092d259c8c76caa30cb899f0b75bb1f8773c7758f64fab0b616305b4.png" src="../_images/7dffab4e092d259c8c76caa30cb899f0b75bb1f8773c7758f64fab0b616305b4.png" />
 </div>
 </div>
 <section id="exercise">
@@ -886,6 +916,7 @@ title="Print to PDF"
 <li><p>Change the order of the words in the list. Would you expect the visualization to change?</p></li>
 <li><p>Add words such as  “banana”, “apple”, “orange”. Could you predict the view?</p></li>
 </ul>
+<p>Also try with a different embedding such as <a class="reference external" href="https://huggingface.co/intfloat/multilingual-e5-large-instruct">intfloat/multilingual-e5-large-instruct</a>.</p>
 </section>
 </section>
 
