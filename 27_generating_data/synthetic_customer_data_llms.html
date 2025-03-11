@@ -58,9 +58,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '43_generating_data/synthetic_customer_data_llms';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '27_generating_data/synthetic_customer_data_llms';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Combining LLMs with Random number generators for data generation" href="synthetic_customer_data_rnd_generators.html" />
+    <link rel="prev" title="Generating Jupyter Notebooks using Reflection" href="../25_code_generation/generate_notebooks_reflection.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="en">
   </head>
@@ -177,6 +179,41 @@ const thebe_selector_output = ".output, .cell_output"
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../20_chatbots/readme.html">
                         Chatbots
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../25_code_generation/bia-bob_demo.html">
+                        Generating code using bia-bob
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../25_code_generation/generating_guis.html">
+                        Generating graphical user interfaces
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../25_code_generation/generate_notebooks_reflection.html">
+                        Generating Jupyter Notebooks using Reflection
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Generating synthetic customer data
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="synthetic_customer_data_rnd_generators.html">
+                        Combining LLMs with Random number generators for data generation
                       </a>
                     </li>
                 
@@ -364,6 +401,41 @@ const thebe_selector_output = ".output, .cell_output"
                 
 
                     <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../25_code_generation/bia-bob_demo.html">
+                        Generating code using bia-bob
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../25_code_generation/generating_guis.html">
+                        Generating graphical user interfaces
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../25_code_generation/generate_notebooks_reflection.html">
+                        Generating Jupyter Notebooks using Reflection
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Generating synthetic customer data
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="synthetic_customer_data_rnd_generators.html">
+                        Combining LLMs with Random number generators for data generation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../33_chat_with_docs/text-embeddings.html">
                         Text embeddings
                       </a>
@@ -511,6 +583,15 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Generating Code and Data</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../25_code_generation/bia-bob_demo.html">Generating code using bia-bob</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../25_code_generation/generating_guis.html">Generating graphical user interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../25_code_generation/generate_notebooks_reflection.html">Generating Jupyter Notebooks using Reflection</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Generating synthetic customer data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="synthetic_customer_data_rnd_generators.html">Combining LLMs with Random number generators for data generation</a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Retrieval Augmented Generation (RAG)</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../33_chat_with_docs/text-embeddings.html">Text embeddings</a></li>
@@ -614,7 +695,7 @@ title="Source repository"
 </a>
 </a>
       
-      <li><a href="https://github.com/ScaDS/secai_llm_training/issues/new?title=Issue%20on%20page%20%2F43_generating_data/synthetic_customer_data_llms.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/ScaDS/secai_llm_training/issues/new?title=Issue%20on%20page%20%2F27_generating_data/synthetic_customer_data_llms.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
@@ -639,7 +720,7 @@ title="Open an issue"
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
-      <li><a href="../_sources/43_generating_data/synthetic_customer_data_llms.ipynb" target="_blank"
+      <li><a href="../_sources/27_generating_data/synthetic_customer_data_llms.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
@@ -789,22 +870,22 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-    &quot;name&quot;: &quot;Emily Johnson&quot;,
+    &quot;name&quot;: &quot;Emily Wilson&quot;,
     &quot;gender&quot;: &quot;Female&quot;,
-    &quot;age&quot;: 31,
-    &quot;income&quot;: 60000.0,
+    &quot;age&quot;: 32,
+    &quot;income&quot;: 85000.0,
     &quot;household_size&quot;: 3,
     &quot;grocery_list&quot;: [
-        {&quot;item&quot;: &quot;Milk&quot;, &quot;price&quot;: 2.99},
-        {&quot;item&quot;: &quot;Bread&quot;, &quot;price&quot;: 1.49},
-        {&quot;item&quot;: &quot;Eggs&quot;, &quot;price&quot;: 1.99},
-        {&quot;item&quot;: &quot;Chicken Breast&quot;, &quot;price&quot;: 8.99},
-        {&quot;item&quot;: &quot;Apples&quot;, &quot;price&quot;: 3.49},
-        {&quot;item&quot;: &quot;Carrots&quot;, &quot;price&quot;: 0.69},
-        {&quot;item&quot;: &quot;Pasta&quot;, &quot;price&quot;: 1.29},
-        {&quot;item&quot;: &quot;Marinara Sauce&quot;, &quot;price&quot;: 2.49},
-        {&quot;item&quot;: &quot;Shredded Cheese&quot;, &quot;price&quot;: 3.99},
-        {&quot;item&quot;: &quot;Greek Yogurt&quot;, &quot;price&quot;: 2.79}
+        {&quot;item&quot;: &quot;Milk (gallon)&quot;, &quot;price&quot;: 3.99},
+        {&quot;item&quot;: &quot;Bread (loaf)&quot;, &quot;price&quot;: 2.49},
+        {&quot;item&quot;: &quot;Chicken breasts (5 lbs)&quot;, &quot;price&quot;: 15.99},
+        {&quot;item&quot;: &quot;Apples (5 count)&quot;, &quot;price&quot;: 6.99},
+        {&quot;item&quot;: &quot;Eggs (dozen)&quot;, &quot;price&quot;: 2.29},
+        {&quot;item&quot;: &quot;Quaker Oats (4 lbs)&quot;, &quot;price&quot;: 8.99},
+        {&quot;item&quot;: &quot;Ground beef (1 lb)&quot;, &quot;price&quot;: 5.99},
+        {&quot;item&quot;: &quot;Carrots (2 lbs)&quot;, &quot;price&quot;: 1.99},
+        {&quot;item&quot;: &quot;Almond milk (half-gallon)&quot;, &quot;price&quot;: 3.49},
+        {&quot;item&quot;: &quot;Peanut butter (26 oz)&quot;, &quot;price&quot;: 7.99}
     ]
 }
 </pre></div>
@@ -833,7 +914,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████| 100/100 [14:25&lt;00:00,  8.66s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████| 100/100 [36:45&lt;00:00, 22.06s/it]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collected 100 valid customer records
@@ -907,48 +988,48 @@ title="Print to PDF"
   <tbody>
     <tr>
       <th>0</th>
-      <td>Emily Chen</td>
-      <td>Female</td>
-      <td>32</td>
-      <td>75000.0</td>
-      <td>3</td>
-      <td>66.19</td>
-    </tr>
-    <tr>
-      <th>1</th>
       <td>Emily Wilson</td>
       <td>Female</td>
       <td>32</td>
       <td>55000.0</td>
       <td>3</td>
-      <td>35.51</td>
+      <td>44.60</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Emily Thompson</td>
+      <td>Female</td>
+      <td>32</td>
+      <td>55000.0</td>
+      <td>3</td>
+      <td>32.90</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>Emily Chen</td>
+      <td>Emily Wilson</td>
       <td>Female</td>
       <td>32</td>
-      <td>75000.0</td>
+      <td>85000.0</td>
       <td>3</td>
-      <td>38.00</td>
+      <td>33.60</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Emily Chen</td>
+      <td>Emily Wilson</td>
       <td>Female</td>
       <td>32</td>
-      <td>75000.0</td>
+      <td>55000.0</td>
       <td>3</td>
-      <td>41.10</td>
+      <td>29.21</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Emily Chen</td>
+      <td>Emily Wilson</td>
       <td>Female</td>
       <td>32</td>
-      <td>75000.0</td>
+      <td>55000.0</td>
       <td>3</td>
-      <td>35.71</td>
+      <td>33.51</td>
     </tr>
     <tr>
       <th>...</th>
@@ -964,27 +1045,27 @@ title="Print to PDF"
       <td>Emily Wilson</td>
       <td>Female</td>
       <td>32</td>
-      <td>55000.0</td>
+      <td>58000.0</td>
       <td>3</td>
-      <td>33.30</td>
+      <td>60.50</td>
     </tr>
     <tr>
       <th>96</th>
-      <td>Emily Johnson</td>
+      <td>Emily Wilson</td>
       <td>Female</td>
       <td>32</td>
-      <td>55000.0</td>
+      <td>75000.0</td>
       <td>3</td>
-      <td>29.91</td>
+      <td>51.21</td>
     </tr>
     <tr>
       <th>97</th>
       <td>Emily Wilson</td>
       <td>Female</td>
-      <td>32</td>
-      <td>55000.0</td>
-      <td>3</td>
-      <td>41.20</td>
+      <td>37</td>
+      <td>85000.0</td>
+      <td>4</td>
+      <td>87.40</td>
     </tr>
     <tr>
       <th>98</th>
@@ -993,7 +1074,7 @@ title="Print to PDF"
       <td>32</td>
       <td>55000.0</td>
       <td>3</td>
-      <td>25.41</td>
+      <td>59.20</td>
     </tr>
     <tr>
       <th>99</th>
@@ -1002,7 +1083,7 @@ title="Print to PDF"
       <td>32</td>
       <td>55000.0</td>
       <td>3</td>
-      <td>37.70</td>
+      <td>30.91</td>
     </tr>
   </tbody>
 </table>
@@ -1036,7 +1117,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6d67d11da665fff71f174b6cda4668d6699bbb56499c7bd973b1256ab535a0ed.png" src="../_images/6d67d11da665fff71f174b6cda4668d6699bbb56499c7bd973b1256ab535a0ed.png" />
+<img alt="../_images/f88131b044e22d1376dae49db10b173d2d168df88ea42a676c88e1ba606cd431.png" src="../_images/f88131b044e22d1376dae49db10b173d2d168df88ea42a676c88e1ba606cd431.png" />
 </div>
 </div>
 </section>
@@ -1053,7 +1134,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/9e40685c4690779269c30e98935044df401db437a0bbc649f1990191d94adce7.png" src="../_images/9e40685c4690779269c30e98935044df401db437a0bbc649f1990191d94adce7.png" />
+<img alt="../_images/8404372db9faf38fb1bccd3aa2970cdfe889535312f355d32585fdb2576bda7c.png" src="../_images/8404372db9faf38fb1bccd3aa2970cdfe889535312f355d32585fdb2576bda7c.png" />
 </div>
 </div>
 </section>
@@ -1076,7 +1157,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             name: "python3",
-            path: "./43_generating_data"
+            path: "./27_generating_data"
         },
         predefinedOutput: true
     }
@@ -1091,6 +1172,20 @@ title="Print to PDF"
             <footer class="bd-footer-article">
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="../25_code_generation/generate_notebooks_reflection.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Generating Jupyter Notebooks using Reflection</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="synthetic_customer_data_rnd_generators.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">Combining LLMs with Random number generators for data generation</p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
+  </a>
 </div>
             </footer>
             
@@ -1165,7 +1260,7 @@ By Robert Haase
   
   <div class="footer-item">
     <p class="last-updated">
-Last updated on 2025-03-10.<br>
+Last updated on 2025-03-11.<br>
 </p>
   </div>
   

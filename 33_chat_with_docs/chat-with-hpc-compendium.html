@@ -184,6 +184,41 @@ const thebe_selector_output = ".output, .cell_output"
                 
 
                     <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../25_code_generation/bia-bob_demo.html">
+                        Generating code using bia-bob
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../25_code_generation/generating_guis.html">
+                        Generating graphical user interfaces
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../25_code_generation/generate_notebooks_reflection.html">
+                        Generating Jupyter Notebooks using Reflection
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../27_generating_data/synthetic_customer_data_llms.html">
+                        Generating synthetic customer data
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../27_generating_data/synthetic_customer_data_rnd_generators.html">
+                        Combining LLMs with Random number generators for data generation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="text-embeddings.html">
                         Text embeddings
                       </a>
@@ -362,6 +397,41 @@ const thebe_selector_output = ".output, .cell_output"
                 
 
                     <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../25_code_generation/bia-bob_demo.html">
+                        Generating code using bia-bob
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../25_code_generation/generating_guis.html">
+                        Generating graphical user interfaces
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../25_code_generation/generate_notebooks_reflection.html">
+                        Generating Jupyter Notebooks using Reflection
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../27_generating_data/synthetic_customer_data_llms.html">
+                        Generating synthetic customer data
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../27_generating_data/synthetic_customer_data_rnd_generators.html">
+                        Combining LLMs with Random number generators for data generation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="text-embeddings.html">
                         Text embeddings
                       </a>
@@ -508,6 +578,15 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../20_chatbots/gui.html">A Chatbot GUI</a></li>
 </ul>
 </li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Generating Code and Data</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../25_code_generation/bia-bob_demo.html">Generating code using bia-bob</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../25_code_generation/generating_guis.html">Generating graphical user interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../25_code_generation/generate_notebooks_reflection.html">Generating Jupyter Notebooks using Reflection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../27_generating_data/synthetic_customer_data_llms.html">Generating synthetic customer data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../27_generating_data/synthetic_customer_data_rnd_generators.html">Combining LLMs with Random number generators for data generation</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Retrieval Augmented Generation (RAG)</span></p>
 <ul class="current nav bd-sidenav">
@@ -692,7 +771,13 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="ask-about-the-hpc-compendium">
 <h1>Ask about the HPC compendium<a class="headerlink" href="#ask-about-the-hpc-compendium" title="Permalink to this heading">#</a></h1>
 <p>In this RAG example, we will use the <a class="reference external" href="https://compendium.hpc.tu-dresden.de/">HPC compendium</a> which is licensed under <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> by TU Dresden ZIH.</p>
-<p>Hint: Execute this notebook from the terminal using <code class="docutils literal notranslate"><span class="pre">voila</span> <span class="pre">chat-with-hpc-compendium.ipynb</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hint: Execute this notebook from the terminal using `voila chat-with-hpc-compendium.ipynb`.</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">llama_index.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">VectorStoreIndex</span><span class="p">,</span> <span class="n">SimpleDirectoryReader</span>
@@ -717,7 +802,8 @@ title="Print to PDF"
 <span class="n">Settings</span><span class="o">.</span><span class="n">llm</span> <span class="o">=</span> <span class="n">OpenAILike</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;meta-llama/Llama-3.3-70B-Instruct&quot;</span><span class="p">,</span> 
                           <span class="n">request_timeout</span><span class="o">=</span><span class="mf">120.0</span><span class="p">,</span> 
                           <span class="n">api_base</span><span class="o">=</span><span class="s2">&quot;https://llm.scads.ai/v1&quot;</span><span class="p">,</span> 
-                          <span class="n">api_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;SCADSAI_API_KEY&#39;</span><span class="p">))</span>
+                          <span class="n">api_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;SCADSAI_API_KEY&#39;</span><span class="p">),</span>
+                          <span class="n">max_tokens</span><span class="o">=</span><span class="mi">2048</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -802,7 +888,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "223a27c7fcec4c64b0ba72195c77f5d3", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "96bbc04e28734a0ab1c24d26066c992c", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "2efd218694d64686bb009db9918ead64", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "a63a173381744e98a87d983569beeb76", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "9d2fd6eeadda4b25afe08ed3918d11df", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "35f479ba57774946ae1c2e97e7d9cc9b", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 </section>
 
@@ -876,7 +962,7 @@ By Robert Haase
   
   <div class="footer-item">
     <p class="last-updated">
-Last updated on 2025-03-10.<br>
+Last updated on 2025-03-11.<br>
 </p>
   </div>
   

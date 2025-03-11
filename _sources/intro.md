@@ -1,6 +1,6 @@
 # SECAI LLM Training
 
-This page is a collection of Jupyter Notebooks about basic and advanced LLM usage, focus on what's possible with the [ScaDS.AI Large Language Models (LLM) Services](https://llm.scads.ai) (VPN required). It aims at Python programmers in [SECAI](https://secai.org/) who want to dive into LLMs for generating text, interpreting images using open source/weights models.
+This is a collection of Jupyter Notebooks about basic and advanced LLM usage, focusing on what's possible with the [ScaDS.AI Large Language Models (LLM) Services](https://llm.scads.ai) (VPN required). It aims at Python programmers in [SECAI](https://secai.org/) who want to dive into LLMs for generating text, code and data using open source/weights models.
 
 Contributions and feedback are very welcome! In case you see room for improvement, please [create a github issue](https://github.com/ScaDS/secai_llm_training/issues) and/or consider [contributing](https://github.com/ScaDS/secai_llm_training/blob/main/CONTRIBUTING.md).
 
@@ -8,19 +8,17 @@ Contributions and feedback are very welcome! In case you see room for improvemen
 
 The notebook collection aims covering these topics:
 * Large Language Models (LLMs)
-* Vision Language Models (VLMs)
-* Multi-modal Language Models
-* Text/Code/Image generation
+* Text/Code/Data generation
 * Prompt Engineering
 * Retrieval-augmented-generation
-* Model fine-tuning
+* Function calling
+* Agents
 
 ## Covered Python libraries and software
 
 In these notebooks we use non-standard libraries from the GenAI field. Installation instructions can be found either in the first chapter or in the readme of the respective subchapter.
 
 * [bia-bob](https://github.com/haesleinhuepf/bia-bob)
-* [blablador](https://helmholtz-blablador.fz-juelich.de/)
 * [llama-index](https://www.llamaindex.ai/)
 * [ollama](https://ollama.com/)
 * [openai](https://github.com/openai/openai-python)
@@ -29,8 +27,7 @@ In these notebooks we use non-standard libraries from the GenAI field. Installat
 
 We will explore how these models work
 * [meta-llama/Llama-3.3-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct)
-* [llava 1.6](https://ollama.com/library/llava),
-* [Qwen/Qwen2-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct)
+* [DeepSeek-Coder-V2-Lite](https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct)
 
 ### Videos
 
@@ -56,6 +53,7 @@ The notebooks presented here were partially taken from other places or inspired 
 * https://github.com/ScaDS/BIDS-lecture-2024
 * https://scads.github.io/prompt-engineering-tutorial-2023/
 * https://github.com/haesleinhuepf/prompting-pptx
+* https://github.com/haesleinhuepf/bia-bob
 
 
 ## Acknowledgements
