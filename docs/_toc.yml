@@ -21,6 +21,16 @@ parts:
       sections:
       - file: 20_chatbots/gui.ipynb
 
+  - caption: Generating Code and Data
+    chapters:
+    - file: 25_code_generation/bia-bob_demo.ipynb
+    - file: 25_code_generation/generating_guis.ipynb
+
+    - file: 25_code_generation/generate_notebooks_reflection.ipynb
+
+    - file: 27_generating_data/synthetic_customer_data_llms.ipynb
+    - file: 27_generating_data/synthetic_customer_data_rnd_generators.ipynb
+
   - caption: Retrieval Augmented Generation (RAG)
     chapters:
     - file: 33_chat_with_docs/text-embeddings.ipynb
