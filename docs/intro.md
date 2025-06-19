@@ -39,7 +39,7 @@ The materials provided here were also discussed in a couple of recorded Online L
 
 ### Slide decks
 
-Also training slides will be open access [soon].
+Also [training slides are available open access](https://zenodo.org/records/15006767).
 
 ### Related resources
 
